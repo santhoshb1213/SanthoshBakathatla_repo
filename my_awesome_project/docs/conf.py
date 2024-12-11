@@ -27,7 +27,7 @@ django.setup()
 
 # -- Project information -----------------------------------------------------
 
-project = "My Awesome Project"
+project = "My Awesome Project copy"
 copyright = """2024, Daniel Roy Greenfeld"""
 author = "Daniel Roy Greenfeld"
 

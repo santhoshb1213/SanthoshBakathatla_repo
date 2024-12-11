@@ -11,7 +11,7 @@ DEBUG = True
 # https://docs.djangoproject.com/en/dev/ref/settings/#secret-key
 SECRET_KEY = env(
     "DJANGO_SECRET_KEY",
-    default="V9jd3BzJ6Ytpv4feINz0IaesKJjk4wl4FlCOaPnjsRcnybmv0DWV2WpxrJv9LrGK",
+    default="0XtJBgz5l5lELlPZZTa9Wcgr9F1jFGGkMXXcf6yg39iQFTqXhec4SBQ4oysDbnPP",
 )
 # https://docs.djangoproject.com/en/dev/ref/settings/#allowed-hosts
 ALLOWED_HOSTS = ["localhost", "0.0.0.0", "127.0.0.1"]  # noqa: S104
@@ -67,6 +67,10 @@ if env("USE_DOCKER") == "yes":
 # ------------------------------------------------------------------------------
 # https://django-extensions.readthedocs.io/en/latest/installation_instructions.html#configuration
 INSTALLED_APPS += ["django_extensions"]
+# Celery
+# ------------------------------------------------------------------------------
 
+# https://docs.celeryq.dev/en/stable/userguide/configuration.html#task-eager-propagates
+CELERY_TASK_EAGER_PROPAGATES = True
 # Your stuff...
 # ------------------------------------------------------------------------------

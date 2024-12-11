@@ -9,7 +9,7 @@ python_files = [
 
 # ==== Coverage ====
 [tool.coverage.run]
-include = ["my_awesome_project/**"]
+include = ["my_awesome_project_copy/**"]
 omit = ["*/migrations/*", "*/tests/*"]
 plugins = ["django_coverage_plugin"]
 

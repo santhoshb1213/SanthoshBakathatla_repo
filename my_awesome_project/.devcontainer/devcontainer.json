@@ -1,6 +1,6 @@
 // For format details, see https://containers.dev/implementors/json_reference/
 {
-    "name": "my_awesome_project_dev",
+    "name": "my_awesome_project_copy_dev",
     "dockerComposeFile": [
         "../docker-compose.local.yml"
     ],
