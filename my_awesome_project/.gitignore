@@ -62,7 +62,8 @@ target/
 # pyenv
 .python-version
 
-
+# celery beat schedule file
+celerybeat-schedule
 
 # Environments
 .venv
@@ -271,7 +272,7 @@ tags
 dump.rdb
 
 ### Project template
-my_awesome_project/media/
+my_awesome_project_copy/media/
 
 .pytest_cache/
 .ipython/

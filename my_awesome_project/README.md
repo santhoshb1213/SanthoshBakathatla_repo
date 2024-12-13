@@ -1,4 +1,4 @@
-# My Awesome Project
+# My Awesome Project copy
 
 Behold My Awesome Project!
 
@@ -25,7 +25,7 @@ For convenience, you can keep your normal user logged in on Chrome and your supe
 
 Running type checks with mypy:
 
-    $ mypy my_awesome_project
+    $ mypy my_awesome_project_copy
 
 ### Test coverage
 
@@ -42,6 +42,33 @@ To run the tests, check your test coverage, and generate an HTML coverage report
 ### Live reloading and Sass CSS compilation
 
 Moved to [Live reloading and SASS compilation](https://cookiecutter-django.readthedocs.io/en/latest/2-local-development/developing-locally.html#using-webpack-or-gulp).
+
+### Celery
+
+This app comes with Celery.
+
+To run a celery worker:
+
+```bash
+cd my_awesome_project_copy
+celery -A config.celery_app worker -l info
+```
+
+Please note: For Celery's import magic to work, it is important _where_ the celery commands are run. If you are in the same folder with _manage.py_, you should be right.
+
+To run [periodic tasks](https://docs.celeryq.dev/en/stable/userguide/periodic-tasks.html), you'll need to start the celery beat scheduler service. You can start it as a standalone process:
+
+```bash
+cd my_awesome_project_copy
+celery -A config.celery_app beat
+```
+
+or you can embed the beat service inside a worker with the `-B` option (not recommended for production use):
+
+```bash
+cd my_awesome_project_copy
+celery -A config.celery_app worker -B -l info
+```
 
 ## Deployment
 
